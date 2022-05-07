@@ -77,7 +77,7 @@ VALUES
   ('Tyler Isle'),
   ('Tyler Isle'),
   ('Tyler Isle'),
-  ('Fog', 'Apparatus');
+  ('Fog');
 
 INSERT INTO SpotifyClone.info_album (album, artista, ano_lancamento)
 VALUES
@@ -159,7 +159,7 @@ VALUES
   (10, 'Rock His Everything', '2017-07-27 05:24:49'),
   (10, 'Home Forever', '2017-12-25 01:03:57');
 
-INSERT INTO SpotifyClone.cancoes (cancoes, duracao_segundos, album_id)
+INSERT INTO SpotifyClone.info_cancoes (cancoes, duracao_segundos, album_id)
 VALUES
   ('Soul For Us', 200, 1),
   ('Reflections Of Magic', 163, 1),
