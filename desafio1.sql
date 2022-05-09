@@ -4,51 +4,51 @@ CREATE DATABASE SpotifyClone;
 
 CREATE TABLE SpotifyClone.usuarios(
     usuario_id INT PRIMARY KEY AUTO_INCREMENT,
-    usuario VARCHAR(50),
-    idade INT
+    usuario VARCHAR(50) NOT NULL,
+    idade INT NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.artistas(
     artista_id INT PRIMARY KEY AUTO_INCREMENT,
-    artista VARCHAR(50)
+    artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.info_album(
     album_id INT PRIMARY KEY AUTO_INCREMENT,
-    album VARCHAR(50),
-    artista VARCHAR(50),
-    ano_lancamento INT,
-    FOREIGN KEY (artista) REFERENCES artistas(artista)
+    album VARCHAR(50) NOT NULL,
+    artista VARCHAR(50) NOT NULL,
+    ano_lancamento INT NOT NULL,
+    FOREIGN KEY (artista) REFERENCES artistas (artista)
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.plano_assinatura(
     plano_id INT PRIMARY KEY AUTO_INCREMENT,
-    plano VARCHAR(50),
-    valor_plano INT,
-    data_assinatura VARCHAR(50),
+    plano VARCHAR(50) NOT NULL,
+    valor_plano INT NOT NULL,
+    data_assinatura VARCHAR(50) NOT NULL,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
-CREATE TABLE SpotifyClone.usuario_seguindo_artista(
+CREATE TABLE SpotifyClone.usuario_seguindo_artistas(
     seguindo_id INT PRIMARY KEY AUTO_INCREMENT,
-    seguindo_artistas VARCHAR(50),
+    seguindo_artistas VARCHAR(50) NOT NULL,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.historicos(
     historico_id INT PRIMARY KEY AUTO_INCREMENT,
-    historico_de_reproducoes VARCHAR(50),
-    data_reproducao VARCHAR(50),
+    historico_de_reproducoes VARCHAR(50) NOT NULL,
+    data_reproducao VARCHAR(50) NOT NULL,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.info_cancoes(
     cancoes_id INT PRIMARY KEY AUTO_INCREMENT,
-    cancoes VARCHAR(50),
-    duracao_segundos VARCHAR(50),
+    cancoes VARCHAR(50) NOT NULL,
+    duracao_segundos VARCHAR(50) NOT NULL,
     album_id INT,
     FOREIGN KEY (album_id) REFERENCES info_album(album_id)
 ) engine = InnoDB;
@@ -105,7 +105,7 @@ VALUES
   (9, 'familiar', 7.99, 2018-04-29),
   (10, 'familiar', 7.99, 2017-01-17);
 
-INSERT INTO SpotifyClone.usuario_seguindo_artista (usuario_id, seguindo_artistas)
+INSERT INTO SpotifyClone.usuario_seguindo_artistas (usuario_id, seguindo_artistas)
 VALUES
   (1, 'Walter Phoenix'),
   (1, 'Freedie Shannon'),
