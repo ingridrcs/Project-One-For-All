@@ -215,7 +215,7 @@ VALUES
   (6, "Wouldn't It Be Nice", '2019-02-07 20:33:48', 38),
   (6, "He Heard You're Bad For Me", '2017-01-24 00:31:17', 29),
   (6, "He Hopes We Can't Stay", '2017-10-12 12:35:20', 30),
-  (6, 'Walking And Game', '2018-05-29 14:56:41', 25),
+  (6, 'Walking And Game', '2018-05-29 14:56:41', 22),
   (7, 'Time Fireworks', '2018-05-09 22:30:49', 5),
   (7, 'Troubles Of My Inner Fire', '2020-07-27 12:52:58', 4),
   (7, 'Celebration Of More', '2018-01-16 18:40:43', 11),
